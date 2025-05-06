@@ -1,0 +1,7 @@
+{
+  "name": "paltics",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
