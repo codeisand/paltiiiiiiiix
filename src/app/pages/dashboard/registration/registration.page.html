@@ -1,0 +1,93 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="height: 36px;" color="dark" />
+  <ion-toolbar color="warning">
+    <ion-back-button color="dark" slot="start"></ion-back-button>
+    <ion-title>Registration</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card mode="ios">
+
+          <ion-item-divider color="warning" mode="md">
+            <ion-label>Today: {{today}}</ion-label>
+          </ion-item-divider>
+
+          <ion-card-content mode="md">
+            <ion-input fill="outline" label="Name" labelPlacement="floating"></ion-input>
+
+            <ion-row>
+              <ion-col style="padding: 0;">
+                <ion-input fill="outline" style="width: 96%;" type="Number" label="Age"
+                  labelPlacement="floating"></ion-input>
+              </ion-col>
+              <ion-col style="padding: 0;">
+                <ion-select label="Sex" fill="outline" style="width: 96%;float: right;" labelPlacement="floating">
+                  <ion-select-option>Male</ion-select-option>
+                  <ion-select-option>Female</ion-select-option>
+                  <ion-select-option>Other</ion-select-option>
+                </ion-select>
+              </ion-col>
+            </ion-row>
+
+            <ion-input fill="outline" label="Phone Number" labelPlacement="floating"></ion-input>
+
+            <ion-row style="align-items: center;">
+              <ion-col style="padding: 0;" size="10">
+                <ion-select label="Chamber" fill="outline" labelPlacement="floating">
+                  <ion-select-option>Place 1</ion-select-option>
+                  <ion-select-option>Place 2</ion-select-option>
+                  <ion-select-option>Place 3</ion-select-option>
+                  <ion-select-option>Place 4</ion-select-option>
+                </ion-select>
+              </ion-col>
+              <ion-col style="padding: 0;">
+                <ion-button style="float: right;" shape="round" id="chember">
+                  <ion-icon slot="icon-only" name="add"></ion-icon>
+                </ion-button>
+              </ion-col>
+            </ion-row>
+
+            <ion-alert mode="ios" trigger="chember" header="Please enter your chember information" [buttons]="alertButtons"
+            [inputs]="alertInputs"></ion-alert>
+
+
+            <ion-row class="ion-justify-content-center ion-align-items-center" style="width: 100%;">
+              <ion-col style="padding: 0;">
+                <ion-textarea rows="5" fill="outline" label="Diagnosis" labelPlacement="floating"></ion-textarea>
+              </ion-col>
+              <ion-col size="12" style="padding: 0;">
+                <!-- <div>
+                  <ion-icon  style="display: block; margin: auto; font-size: 90px;padding: 6px;border: 1px dotted #ffb730;border-radius: 6px;"
+                  name="image"></ion-icon>
+                  
+                </div> -->
+                <div style="border: 2px dashed #6287ff;border-radius: 8px;border-spacing: 10px;  display: flex;flex-direction: column; justify-content: space-around;align-items: center;height: 160px;">
+                  <ion-icon style="font-size: 64px;" color="primary" name="cloud-upload"></ion-icon>
+                  <ion-button>upload Prescription</ion-button>
+                </div>
+              </ion-col>
+            </ion-row>
+            
+
+          </ion-card-content>
+
+          <ion-card-header color="success" style="padding: 0;">
+            <ion-button style="margin: 0;" mode="md"  expand="block" fill="clear" color="dark">save Now!</ion-button>
+          </ion-card-header>
+
+          <!-- <ion-item-divider mode="md" color="success">
+            <ion-title><ion-button  expand="block" fill="clear" color="dark">save Now!</ion-button></ion-title>
+          </ion-item-divider> -->
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+</ion-content>

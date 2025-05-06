@@ -1,0 +1,111 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="height: 36px;" color="dark" />
+  <!-- <ion-toolbar></ion-toolbar> -->
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div style="height: 20px;"></div>
+
+  <div style="display: flex;flex-direction: column;align-items: center;justify-content: center;">
+    <div class="logo" style="width: 100px;height: 100px;border-radius: 12%;background: #86a7ff;"></div>
+    <div style="height: 6px;"></div>
+    <ion-text>Tag line</ion-text>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card mode="ios" style="margin-top: 6px;">
+          <!-- <ion-card-header style="display: flex;flex-direction: row; align-items: center; padding-bottom: 0;">
+            <img src="../../../../assets/register.svg" alt="" style="width: 60vw;margin: auto;display: block;">
+            Sign up 
+            </ion-card-header> -->
+          <!-- <ion-note style="padding-left: 6px;">PART - {{ispartOne? 'I' : 'II'}}  </ion-note> -->
+
+          <ion-item-divider color="warning" mode="md">
+            <ion-label style="font-weight: 700;text-transform: uppercase;">Sign up </ion-label>
+          </ion-item-divider>
+          <ion-card-content mode="md" style="padding-top: 0px;">
+            <ion-input fill="outline"  labelPlacement="floating">
+              <div slot="label">Name <ion-text color="danger">(Required)</ion-text></div>
+            </ion-input>
+
+            <ion-row class="inputModRow">
+              <ion-col style="padding: 0;">
+                <ion-input fill="outline" style="width: 96%;" type="Number"  labelPlacement="floating">
+                  <div slot="label">Age <ion-text color="danger">(Required)</ion-text></div>
+                </ion-input>
+              </ion-col>
+              <ion-col style="padding: 0;">
+                <ion-select  fill="outline" style="width: 96%;float: right;" labelPlacement="floating">
+                  <ion-select-option>Male</ion-select-option>
+                  <ion-select-option>Female</ion-select-option>
+                  <ion-select-option>Other</ion-select-option>
+                  <div slot="label">Sex <ion-text color="danger">(Required)</ion-text></div>
+                </ion-select>
+              </ion-col>
+            </ion-row>
+
+
+            <ion-select fill="outline">
+              <ion-select-option></ion-select-option>
+              <div slot="label">Speciality <ion-text color="danger">(Required)</ion-text></div>
+            </ion-select>
+
+
+            <ion-input fill="outline" labelPlacement="floating">
+              <div slot="label">City <ion-text color="danger">(Required)</ion-text></div>
+            </ion-input>
+
+
+            <ion-input fill="outline"  labelPlacement="floating" type="password">
+              <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+              <!-- <ion-button fill="clear" slot="end" aria-label="Show/hide">
+                <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon>
+              </ion-button> -->
+              <div slot="label">Password <ion-text color="danger">(Required)</ion-text></div>
+            </ion-input>
+
+            <ion-input fill="outline" labelPlacement="floating">
+              <div slot="label">Confirm Password <ion-text color="danger">(Required)</ion-text></div>
+            </ion-input>
+
+            <ion-input fill="outline" type="tel" [counter]="true" maxlength="10" labelPlacement="floating">
+              <div slot="label">Phone Number <ion-text color="danger">(Required)</ion-text></div> 
+            </ion-input>
+
+
+            <ion-input fill="outline" labelPlacement="floating">
+              <div slot="label">Email ID <ion-text color="danger">(Required)</ion-text></div>
+            </ion-input>
+
+            <div style="display: block;text-align: center;">
+              <ion-button shape="round" expand="full" fill="outline" mode="md" id="chember">add chember
+                <ion-icon slot="start" name="location"></ion-icon>
+              </ion-button>
+            </div>
+          </ion-card-content>
+
+          <div style="display: flex; justify-content: start;align-items: center;margin-bottom: 10px;padding-left: 20px;">
+            <ion-checkbox mode="md" style="padding-right: 6px;" (ionChange)="bot($event)"></ion-checkbox>I am not a bot
+          </div>
+
+          <div style="display: flex; justify-content: start;align-items: center;margin-bottom: 10px;padding-left: 20px;">
+            <ion-checkbox mode="md" style="padding-right: 6px;" (ionChange)="tc($event)"></ion-checkbox> I agree to the Terms and Conditions
+          </div>
+
+          <ion-item-divider color="warning" mode="md">
+            <ion-title>
+              <ion-button fill="clear" color="dark" expand="block" [disabled]="isBot || isTC" routerLink="/dashboard">Register</ion-button>
+            </ion-title>
+          </ion-item-divider>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-alert trigger="chember" header="Please enter your chember information" [buttons]="alertButtons"
+    [inputs]="alertInputs"></ion-alert>
+</ion-content>

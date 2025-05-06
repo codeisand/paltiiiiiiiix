@@ -1,0 +1,117 @@
+<ion-header [translucent]="true">
+  <ion-toolbar style="height: 36px;" color="dark" />
+  <ion-toolbar color="warning">
+    <ion-back-button color="dark" slot="start"></ion-back-button>
+    <ion-title>Find User</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-searchbar mode="ios" animated="true"></ion-searchbar>
+
+  <ion-card>
+    <ion-card-content style="padding: 0;">
+      <ion-accordion-group>
+        <ion-accordion value="first">
+          <ion-item slot="header" color="light">
+            <ion-label><ion-icon class="icall" slot="start" name="call"></ion-icon> 9563776343</ion-label>
+            <ion-label style="text-transform: capitalize;"><ion-icon  slot="start" name="person"></ion-icon> sandeep basak</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">
+            <ion-row>
+              <ion-col>Age: 30</ion-col>
+              <ion-col>Sex : Male</ion-col>
+            </ion-row>
+            <ion-row>
+              <!-- <ion-col>Date: 12/05/2025</ion-col> -->
+              <ion-col>Chamber: Rabi Medico, Siliguri</ion-col>
+            </ion-row>
+          </div>
+        </ion-accordion>
+        <ion-accordion value="second">
+          <ion-item slot="header" color="light">
+            <ion-label>Date: 12/05/2025</ion-label>
+          </ion-item>
+          <div slot="content">
+            <ion-row class="ion-justify-content-center ion-align-items-center" style="width: 100%;">
+              <ion-col style="padding: 0;">
+                <ion-item lines="none" style="padding: 0;">
+                  <ion-thumbnail slot="start">
+                    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                  </ion-thumbnail>
+                  <ion-label color="dark">Symptoms:  <ion-text style="color: #5c5c5c;">when an unknown printer took a galley of type and scrambled it to make a type specimen book.</ion-text></ion-label>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </div>
+        </ion-accordion>
+        <ion-accordion value="third">
+          <ion-item slot="header" color="light">
+            <ion-label>Date: 12/07/2025</ion-label>
+          </ion-item>
+          <div slot="content">
+            <ion-row class="ion-justify-content-center ion-align-items-center" style="width: 100%;">
+              <ion-col style="padding: 0;">
+                <ion-item lines="none" style="padding: 0;">
+                  <ion-thumbnail slot="start">
+                    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                  </ion-thumbnail>
+                  <ion-label color="dark">Symptoms:  <ion-text style="color: #5c5c5c;">when an unknown printer took a galley of type and scrambled it to make a type specimen book.</ion-text></ion-label>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </div>
+        </ion-accordion>
+      </ion-accordion-group>
+    </ion-card-content>
+    <ion-card-content style="padding: 0;">
+      <ion-button expand="full" style="text-transform: capitalize;margin: 0;" (click)="revisit()">Revisit</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content style="padding: 0;">
+      <ion-accordion-group>
+        <ion-accordion value="first">
+          <ion-item slot="header" color="light">
+            <ion-label><ion-icon class="icall" slot="start" name="call"></ion-icon> 9563776343</ion-label>
+            <ion-label style="text-transform: capitalize;"><ion-icon  slot="start" name="person"></ion-icon> sandeep basak</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">
+            <ion-row>
+              <ion-col>Age: 30</ion-col>
+              <ion-col>Sex : Male</ion-col>
+            </ion-row>
+            <ion-row>
+              <!-- <ion-col>Date: 12/05/2025</ion-col> -->
+              <ion-col>Chamber: Rabi Medico, Siliguri</ion-col>
+            </ion-row>
+          </div>
+        </ion-accordion>
+        <ion-accordion value="second">
+          <ion-item slot="header" color="light">
+            <ion-label>Date: 12/05/2025</ion-label>
+          </ion-item>
+          <div  slot="content">
+            <ion-row class="ion-justify-content-center ion-align-items-center" style="width: 100%;">
+              <ion-col style="padding: 0;">
+                <ion-item lines="none" style="padding: 0;">
+                  <ion-thumbnail slot="start">
+                    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/thumbnail.svg" />
+                  </ion-thumbnail>
+                  <ion-label color="dark">Symptoms:  <ion-text style="color: #5c5c5c;">when an unknown printer took a galley of type and scrambled it to make a type specimen book.</ion-text></ion-label>
+                </ion-item>
+              </ion-col>
+            </ion-row>
+          </div>
+        </ion-accordion>
+      </ion-accordion-group>
+    </ion-card-content>
+    <ion-card-content style="padding: 0;">
+      <ion-button expand="full" style="text-transform: capitalize;margin: 0;" (click)="revisit()">Revisit</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-action-sheet mode="ios" [isOpen]="isActionSheet" header="Actions" (didDismiss)=" isActionSheet= false"
+   [buttons]="actionSheetButtons"></ion-action-sheet>
+</ion-content>

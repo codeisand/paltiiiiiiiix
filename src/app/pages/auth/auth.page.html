@@ -1,0 +1,35 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar style="height: 36px;" color="dark" />
+  <!-- <ion-toolbar>
+    <ion-title>auth</ion-title>
+  </ion-toolbar> -->
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card mode="ios" style="margin:10px 12px;">
+    <ion-card-content mode="md" style="padding: 0%;">
+      <swiper-container  autoplay="true" pagination="true">
+        <swiper-slide>
+          <div class="slideDiv" style="background: #ff944c;"></div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="slideDiv" style="background: #4cff64;"></div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="slideDiv" style="background: #6d4cff;"></div>
+        </swiper-slide>
+      </swiper-container>
+    </ion-card-content>
+  </ion-card>
+
+
+  <div style="width: 75vw;margin: auto;display: block; position: fixed;left: 0;right: 0;bottom: 10px;">
+    <ion-button expand="block" mode="md" routerLink="/register">Sign up</ion-button>
+    <div style="height: 2px;"></div>
+    <ion-button expand="block" mode="md"  fill="outline" routerLink="/login">Sign in</ion-button>
+    <div style="height: 20px;"></div>
+    <ton-text style="display: block;text-align: center;">Powered By <ion-text style="text-transform: uppercase;">Pal</ion-text> </ton-text>
+  </div>
+
+
+</ion-content>

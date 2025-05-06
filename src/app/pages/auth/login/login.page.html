@@ -1,0 +1,50 @@
+<ion-header [translucent]="true" >
+  <ion-toolbar style="height: 36px;" color="dark" />
+    <!-- <ion-toolbar></ion-toolbar> -->
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card mode="ios" style="margin:10px 12px;">
+    <ion-card-content mode="md" style="padding: 0%;">
+      <swiper-container autoplay="true" pagination="true">
+        <swiper-slide>
+          <div class="slideDiv" style="background: #ff944c;"></div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="slideDiv" style="background: #4cff64;"></div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="slideDiv" style="background: #6d4cff;"></div>
+        </swiper-slide>
+      </swiper-container>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card mode="ios">
+          <ion-item-divider color="warning" mode="md" >
+            <ion-label style="font-weight: 700;text-transform: uppercase;">Sign in </ion-label>
+          </ion-item-divider>
+
+          <ion-card-content mode="md">
+            <ion-input fill="outline" type="tel" [counter]="true" maxlength="10" label="Phone Number" labelPlacement="floating"></ion-input>
+            <ion-input fill="outline" label="Password" labelPlacement="floating"></ion-input>
+          </ion-card-content>
+
+          <div style="display: flex; justify-content: start;align-items: center;margin-bottom: 10px;padding-left: 20px;">
+            <ion-checkbox mode="md" style="padding-right: 6px;" (ionChange)="bot($event)"></ion-checkbox>I am not a bot
+          </div>
+
+          <ion-item-divider color="warning" mode="md">
+            <ion-title>
+              <ion-button fill="clear"[disabled]="isBot" color="dark" expand="block" routerLink="/dashboard">Login</ion-button>
+            </ion-title>
+          </ion-item-divider>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
